@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Le marché – fiche de révision</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fbfcff;--line:#dbe4f5;--ink:#1d2b5c;--muted:#56628c;--blue:#2447c9;--red:#d4405a;--green:#1f8a63;--hi:#fff1a6;--soft:#eef2fd;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141a33;--line:#222c52;--ink:#e6ebff;--muted:#9aa7d6;--blue:#7d9bff;--red:#ff7b93;--green:#4fd1a1;--hi:#4a4310;--soft:#1c2445}}
+:root[data-theme="dark"]{--paper:#141a33;--line:#222c52;--ink:#e6ebff;--muted:#9aa7d6;--blue:#7d9bff;--red:#ff7b93;--green:#4fd1a1;--hi:#4a4310;--soft:#1c2445}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+*{box-sizing:border-box}
+body{margin:0;background-color:var(--paper);background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:26px 26px;color:var(--ink);font:17px/1.65 "Atkinson Hyperlegible",system-ui,sans-serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;overflow-x:auto;padding:10px 14px;background:var(--paper);border-bottom:2px solid var(--red)}
+nav a{white-space:nowrap;color:var(--ink);text-decoration:none;padding:4px 12px;border-radius:99px;font-weight:700;font-size:15px}
+nav a:hover,nav a:focus-visible{background:var(--hi);outline:none}
+main{max-width:780px;margin:0 auto;padding:0 18px 80px;border-left:2px solid var(--red)}
+header{padding:48px 0 12px 18px}
+h1{font:700 clamp(38px,9vw,64px)/1.05 Kalam,cursive;margin:0 0 10px;color:var(--blue)}
+h2{font:700 32px/1.15 Kalam,cursive;margin:0 0 6px;color:var(--blue)}
+h3{font:700 22px Kalam,cursive;margin:22px 0 4px}
+section{padding:36px 0 8px 18px}
+p{margin:.5em 0;max-width:68ch}
+.lead{font-size:19px;color:var(--muted);max-width:56ch}
+mark{background:var(--hi);color:inherit;padding:0 3px;border-radius:3px}
+.box{border:2px solid var(--blue);border-radius:6px 14px 6px 14px;padding:12px 16px;margin:14px 0;background:var(--paper)}
+ul{padding-left:20px;max-width:68ch}li{margin:4px 0}
+.chart{background:var(--paper);border:2px solid var(--ink);border-radius:6px;padding:8px;margin:14px 0}
+svg{width:100%;height:auto;display:block}
+svg text{fill:var(--ink);font:13px "Atkinson Hyperlegible",sans-serif}
+.ctl{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:8px 4px}
+.ctl input[type=range]{flex:1 1 220px;accent-color:var(--red);height:28px}
+.stat{font:700 20px Kalam,cursive;min-height:2.6em}
+button{font:700 16px "Atkinson Hyperlegible",sans-serif;background:var(--blue);color:var(--paper);border:0;border-radius:8px;padding:10px 16px;cursor:pointer;min-height:44px}
+button:focus-visible,input:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+button.opt{display:block;width:100%;text-align:left;background:var(--paper);color:var(--ink);border:2px solid var(--ink);margin:8px 0}
+button.opt.ok{border-color:var(--green);background:var(--soft)}
+button.opt.no{border-color:var(--red);background:var(--soft)}
+.loop{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:14px 0}
+.loop div{border:2px dashed var(--muted);border-radius:10px;padding:10px 12px}
+.loop b{display:block;font-family:Kalam,cursive;font-size:19px}
+table{border-collapse:collapse;width:100%;margin:12px 0}
+th,td{border:2px solid var(--ink);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+.wrap{overflow-x:auto}
+footer{padding:30px 0 0 18px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav aria-label="Sommaire">
+<a href="#marche">1 · Marché</a><a href="#schema">2 · Schéma</a><a href="#auto">3 · Auto-régulation</a><a href="#elast">4 · Élasticité</a><a href="#cpp">5 · CPP</a><a href="#struct">6 · Structures</a><a href="#quiz">Quiz</a>
+</nav>
+<main>
+<header>
+<h1>Le marché, expliqué simplement</h1>
+<p class="lead">Fiche de révision : le marché.</p>
+</header>
+
+<section id="marche">
+<h2>1. Qu’est-ce qu’un marché ?</h2>
+<p>Un marché est un <mark>lieu de rencontre, fictif ou réel</mark>, où l’<b>offre</b> (les vendeurs) et la <b>demande</b> (les acheteurs) déterminent ensemble un <b>prix</b> et une <b>quantité d’équilibre</b>.</p>
+<p>Réel : le marché de ton quartier. Fictif : une appli de vente en ligne ou la Bourse, où personne ne se voit.</p>
+<div class="box"><b>Pour que ça marche, il faut :</b>
+<ul>
+<li>une <b>institution</b> : des règles qui garantissent la confiance des échanges (contrats, lois, justice) ;</li>
+<li>le <b>droit de propriété</b> : je peux <b>utiliser</b> (usus), <b>en tirer un profit</b> (fructus) et <b>vendre</b> (abusus) ce qui m’appartient.</li>
+</ul></div>
+</section>
+
+<section id="schema">
+<h2>2. Représenter le marché</h2>
+<p>Deux courbes :</p>
+<ul>
+<li><b>Offre</b> : fonction <mark>croissante</mark> du prix. Prix qui monte → les vendeurs produisent plus.</li>
+<li><b>Demande</b> : fonction <mark>décroissante</mark> du prix. Prix qui monte → les acheteurs achètent moins.</li>
+</ul>
+<p>Elles se croisent au point d’<b>équilibre</b> : ici <b>70 unités à 15 €</b>. Déplace le prix avec le curseur et regarde ce qui se passe.</p>
+<div class="chart"><svg id="c" viewBox="0 0 640 400" role="img" aria-label="Schéma offre demande avec équilibre à 70 unités et 15 euros"></svg></div>
+<div class="ctl">
+<label for="p"><b>Prix testé :</b> <span id="pv">15</span> €</label>
+<input id="p" type="range" min="5" max="30" step="1" value="15">
+<label><input id="sp" type="checkbox" checked> afficher les surplus</label>
+</div>
+<div class="stat" id="stat" aria-live="polite"></div>
+<div class="box"><b>Lire le schéma</b>
+<ul>
+<li><b>Prix à 20 €</b> : la demande est de 65, l’offre de 75. Il y a <mark>10 unités en trop : surplus</mark>.</li>
+<li><b>Prix à 10 €</b> : la demande est de 75, l’offre de 65. Il manque 10 unités : <mark>pénurie</mark>.</li>
+<li><b>SP cons</b> (surplus du consommateur) : ce que les acheteurs auraient accepté de payer en plus du prix du marché.</li>
+<li><b>SP prod</b> (surplus du producteur) : ce que les vendeurs gagnent au-dessus du minimum qu’ils voulaient.</li>
+<li>La ligne à <b>30 €</b> est le prix maximum que les acheteurs acceptent de payer (le prix « plafond » de la demande). Le prix « plancher » est le plus bas prix auquel les vendeurs acceptent de produire (5 €).</li>
+</ul></div>
+<h3>Pourquoi l’offre est croissante</h3>
+<p>Quand le prix augmente, l’offre augmente. Le vendeur continue à produire <mark>tant que le coût marginal est inférieur au prix de vente</mark> (le coût marginal est le coût de la dernière unité fabriquée). Tant qu’il gagne un peu sur chaque unité, il en produit une de plus.</p>
+</section>
+
+<section id="auto">
+<h2>3. Le marché s’auto-régule</h2>
+<p>Personne ne fixe le prix « juste » : le prix se corrige tout seul.</p>
+<div class="loop">
+<div><b>Prix trop haut</b>La demande baisse, l’offre monte : <mark>offre &gt; demande</mark> (surplus).</div>
+<div><b>Le prix baisse</b>Pour vendre le stock, les vendeurs baissent leurs prix.</div>
+<div><b>Prix trop bas</b>La demande monte, l’offre baisse : <mark>demande &gt; offre</mark> (pénurie).</div>
+<div><b>Le prix monte</b>Les acheteurs se disputent le peu qui reste.</div>
+</div>
+<p>Le cycle s’arrête quand offre = demande : c’est l’équilibre.</p>
+</section>
+
+<section id="elast">
+<h2>4. L’élasticité</h2>
+<p>L’<b>élasticité-prix de la demande</b> mesure la sensibilité de la demande quand le prix change.</p>
+<div class="box"><b>ε = variation de la quantité demandée (en %) ÷ variation du prix (en %)</b><br>Le prix monte (+), la demande baisse (−) : le résultat est <mark>négatif</mark> (− ÷ + = −). Prix baisse (−), demande monte (+) : négatif aussi.</div>
+<div class="wrap"><table>
+<tr><th>Valeur de |ε|</th><th>Nom</th><th>Ce que ça veut dire</th><th>Exemple</th></tr>
+<tr><td>0</td><td>Parfaitement inélastique</td><td>La demande ne bouge pas du tout</td><td>Médicament vital</td></tr>
+<tr><td>entre 0 et 1</td><td>Inélastique</td><td>Le prix change beaucoup, la demande peu</td><td>Pain, électricité</td></tr>
+<tr><td>supérieur à 1</td><td>Élastique</td><td>La demande réagit fortement</td><td>Vacances, produits de luxe</td></tr>
+</table></div>
+<p>Sur un graphique : demande élastique = courbe <b>plate</b>, demande inélastique = courbe <b>raide</b> (presque verticale).</p>
+
+</section>
+
+<section id="cpp">
+<h2>5. La concurrence pure et parfaite (CPP)</h2>
+<p>C’est un marché idéal, qui n’existe presque jamais. Il faut <b>5 conditions</b> (la cinquième est celle que tu avais notée entre parenthèses) :</p>
+<div class="wrap"><table>
+<tr><th>Condition</th><th>Signification</th><th>Exemple</th></tr>
+<tr><td><b>Atomicité</b></td><td>Beaucoup de petits vendeurs et acheteurs : aucun ne peut influencer le prix à lui seul.</td><td>Un marché de fruits avec 200 marchands</td></tr>
+<tr><td><b>Homogénéité</b></td><td>Les produits sont identiques : l’acheteur ne distingue pas un vendeur d’un autre.</td><td>Du blé de même qualité</td></tr>
+<tr><td><b>Transparence</b></td><td>Tout le monde connaît les prix et la qualité.</td><td>Prix affichés partout</td></tr>
+<tr><td><b>Libre entrée et sortie</b></td><td>On peut ouvrir ou fermer son activité librement.</td><td>Pas de licence obligatoire</td></tr>
+<tr><td><b>Mobilité des facteurs de production</b></td><td>Le travail et le capital passent facilement d’un secteur à un autre.</td><td>Un ouvrier change de métier sans obstacle</td></tr>
+</table></div>
+<p>Dans la CPP, chaque vendeur est <mark>« preneur de prix »</mark> : il subit le prix du marché, il ne le décide pas.</p>
+</section>
+
+<section id="struct">
+<h2>6. Les structures de marché</h2>
+<p>Dans la réalité, le marché ne remplit pas toutes les conditions de la CPP. Selon le nombre de vendeurs :</p>
+<div class="wrap"><table>
+<tr><th>Structure</th><th>Vendeurs</th><th>Pouvoir sur le prix</th></tr>
+<tr><td>Concurrence</td><td>Très nombreux</td><td>Nul</td></tr>
+<tr><td>Oligopole</td><td>Quelques-uns (ex. les opérateurs téléphoniques)</td><td>Fort : ils surveillent les prix des autres</td></tr>
+<tr><td>Duopole</td><td>Deux (cas particulier d’oligopole)</td><td>Fort</td></tr>
+<tr><td>Monopole</td><td>Un seul</td><td>Total : il fixe son prix</td></tr>
+</table></div>
+<p>La <b>concurrence monopolistique</b> correspond à une situation où il existe beaucoup de vendeurs, mais où les produits sont différenciés (par exemple, les marques de vêtements).</p>
+</section>
+
+<section id="quiz">
+<h2>Quiz : es-tu prêt pour vendredi ?</h2>
+<p>8 questions. Fais-le seul, puis en groupe : chacun répond, et vous comparez avant de cliquer.</p>
+<div id="qz"></div>
+</section>
+
+</main>
+
+<script>
+(function(){
+var X=function(q){return 60+q*6},Y=function(p){return 360-p*10};
+var svg=document.getElementById('c'),ps=document.getElementById('p'),pv=document.getElementById('pv'),sp=document.getElementById('sp'),st=document.getElementById('stat');
+function L(x1,y1,x2,y2,c,w,d){return '<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" stroke="'+c+'" stroke-width="'+(w||1)+'"'+(d?' stroke-dasharray="'+d+'"':'')+'/>'}
+function T(x,y,s,c,a){return '<text x="'+x+'" y="'+y+'"'+(a?' text-anchor="'+a+'"':'')+(c?' style="fill:'+c+'"':'')+'>'+s+'</text>'}
+function draw(){
+var p=+ps.value,qd=85-p,qs=55+p,h='';
+if(sp.checked){
+h+='<polygon points="'+X(5)+','+Y(30)+' '+X(55)+','+Y(30)+' '+X(70)+','+Y(15)+' '+X(5)+','+Y(15)+'" fill="#2447c9" opacity=".13"/>';
+h+='<polygon points="'+X(5)+','+Y(15)+' '+X(70)+','+Y(15)+' '+X(60)+','+Y(5)+' '+X(5)+','+Y(5)+'" fill="#1f8a63" opacity=".16"/>';
+h+=T(X(22),Y(23),'SP cons','var(--blue)','middle').replace('<text','<text font-weight="700" font-size="18"');
+h+=T(X(30),Y(9),'SP prod','var(--green)','middle').replace('<text','<text font-weight="700" font-size="18"');}
+for(var q=5;q<=85;q+=5){h+=L(X(q),360,X(q),366,'var(--ink)',1.5)+T(X(q),381,q,'','middle');}
+for(var y=5;y<=30;y+=5){h+=L(54,Y(y),60,Y(y),'var(--ink)',1.5)+T(48,Y(y)+4,y,'','end');}
+h+=L(60,360,610,360,'var(--ink)',2.5)+L(60,360,60,40,'var(--ink)',2.5);
+h+=T(66,48,'prix (€)')+T(606,352,'quantité','','end');
+h+=L(X(55),Y(30),X(87),Y(30),'var(--ink)',1.5,'');
+h+=L(X(55),Y(30),X(80),Y(5),'var(--red)',3)+T(X(80)+4,Y(5)+14,'demande','var(--red)');
+h+=L(X(60),Y(5),X(80),Y(25),'var(--blue)',3)+T(X(80)+6,Y(25)+4,'offre','var(--blue)');
+h+=L(X(70),Y(15),X(70),360,'var(--muted)',1,'4 4')+L(60,Y(15),X(70),Y(15),'var(--muted)',1,'4 4');
+h+='<circle cx="'+X(70)+'" cy="'+Y(15)+'" r="7" fill="none" stroke="var(--ink)" stroke-width="2.5"/>';
+h+=T(X(70)+10,Y(15)-10,'équilibre (70 ; 15)');
+var col=p>15?'var(--green)':(p<15?'var(--red)':'var(--ink)');
+h+=L(60,Y(p),X(87),Y(p),col,2,'6 4');
+if(p!==15){var a=Math.min(qd,qs),b=Math.max(qd,qs);
+h+=L(X(a),Y(p),X(b),Y(p),col,6)+'<circle cx="'+X(qd)+'" cy="'+Y(p)+'" r="5" fill="var(--red)"/><circle cx="'+X(qs)+'" cy="'+Y(p)+'" r="5" fill="var(--blue)"/>';
+h+=T((X(a)+X(b))/2,Y(p)+(p>15?-12:22),p>15?'surplus':'pénurie',col,'middle').replace('<text','<text font-weight="700" font-size="16"');}
+svg.innerHTML=h;pv.textContent=p;
+if(p===15)st.innerHTML='Prix d’équilibre : demande = offre = 70. Tout ce qui est produit est vendu.';
+else if(p>15)st.innerHTML='À '+p+' € : demande '+qd+', offre '+qs+'. <span style="color:var(--green)">Surplus de '+(qs-qd)+'.</span> Les vendeurs baissent le prix.';
+else st.innerHTML='À '+p+' € : demande '+qd+', offre '+qs+'. <span style="color:var(--red)">Pénurie de '+(qd-qs)+'.</span> Les acheteurs poussent le prix à monter.';
+}
+ps.addEventListener('input',draw);sp.addEventListener('change',draw);draw();
+
+var Q=[
+{q:'Le prix d’un produit augmente. Que fait normalement la demande ?',o:['Elle augmente','Elle baisse','Elle ne change jamais'],a:1,e:'La demande est une fonction décroissante du prix.'},
+{q:'Le prix est au-dessus du prix d’équilibre. Que se passe-t-il ?',o:['Une pénurie','Un surplus, donc le prix baisse','Rien'],a:1,e:'Offre > demande : il y a un surplus, les vendeurs baissent leurs prix.'},
+{q:'Sur ton schéma, à 10 €, la demande est de 75 et l’offre de 65. C’est :',o:['Une pénurie de 10','Un surplus de 10','L’équilibre'],a:0,e:'Demande > offre : il manque 10 unités, le prix va monter.'},
+{q:'ε = −0,4. La demande est :',o:['Élastique','Inélastique','Parfaitement inélastique'],a:1,e:'|ε| est inférieur à 1 : la demande réagit peu au prix.'},
+{q:'Une entreprise continue de produire tant que :',o:['Le coût marginal est inférieur au prix de vente','Le prix baisse','Elle n’a pas de concurrent'],a:0,e:'Chaque unité supplémentaire rapporte tant que son coût marginal est sous le prix.'},
+{q:'« Aucun vendeur ne peut influencer le prix à lui seul » correspond à :',o:['L’homogénéité','La transparence','L’atomicité'],a:2,e:'Atomicité : beaucoup de petits acteurs.'},
+{q:'Un seul vendeur sur le marché, c’est :',o:['Un duopole','Un monopole','Un oligopole'],a:1,e:'Mono = un seul. Duo = deux, oligo = quelques-uns.'},
+{q:'Le surplus du consommateur, c’est :',o:['Le profit du vendeur','Ce que l’acheteur était prêt à payer en plus du prix payé','Le stock invendu'],a:1,e:'C’est l’économie réalisée par les acheteurs (SP cons).'}
+],i=0,s=0,box=document.getElementById('qz');
+function show(){
+if(i>=Q.length){box.innerHTML='<div class="box"><div class="stat">Score : '+s+' / '+Q.length+'</div><p>'+(s>=7?'Très bien, tu es prêt.':s>=5?'Pas mal. Relis les sections où tu as hésité.':'Relis la fiche, puis refais le quiz.')+'</p><button id="rs">Recommencer</button></div>';
+document.getElementById('rs').onclick=function(){i=0;s=0;show()};return;}
+var x=Q[i],h='<p><b>Question '+(i+1)+' sur '+Q.length+'</b></p><p>'+x.q+'</p>';
+x.o.forEach(function(t,k){h+='<button class="opt" data-k="'+k+'">'+t+'</button>'});
+box.innerHTML=h+'<p id="fb" aria-live="polite"></p>';
+var bs=box.querySelectorAll('.opt');
+bs.forEach(function(b){b.onclick=function(){
+var k=+b.dataset.k;bs.forEach(function(z){z.disabled=true});
+bs[x.a].classList.add('ok');if(k===x.a)s++;else b.classList.add('no');
+document.getElementById('fb').innerHTML=(k===x.a?'<b>Juste.</b> ':'<b>Pas tout à fait.</b> ')+x.e+'<br><br><button id="nx">'+(i<Q.length-1?'Question suivante':'Voir mon score')+'</button>';
+document.getElementById('nx').onclick=function(){i++;show()};}});
+}
+show();
+})();
+</script>
+</body>
+</html>
